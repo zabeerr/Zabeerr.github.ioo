@@ -1,1 +1,68 @@
 
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zabeerr — Dark Neon</title>
+  <meta name="description" content="Zabeerr | Personal site" />
+  <style>
+    :root{
+      --bg:#070707; --card:#0e0e0e; --accent:#00eaff; --muted:#bfbfbf;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, Arial; background:var(--bg); color:#fff; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:900px;margin:40px auto;padding:24px}
+    .hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+    .avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;border:4px solid rgba(0,234,255,.12);box-shadow:0 0 30px rgba(0,234,255,.08);flex:0 0 150px}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .title{flex:1;min-width:220px}
+    .name{font-size:40px;margin:0 0 6px;letter-spacing:4px;text-transform:uppercase; font-weight:800; color:var(--accent); text-shadow:0 0 12px rgba(0,234,255,.25)}
+    .tag{margin:0;color:var(--muted);font-size:15px}.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px;margin-top:20px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+
+.buttons{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(0,234,255,.12);background:transparent;color:var(--accent);text-decoration:none;font-weight:600}
+
+/* simple fade-in animation */
+.fade{opacity:0;transform:translateY(10px);animation:fadeIn .7s forwards}
+.fade.delay{animation-delay:.15s}
+@keyframes fadeIn{to{opacity:1;transform:none}}
+
+/* responsive */
+@media (max-width:600px){.name{font-size:28px}.avatar{width:120px;height:120px}}
+
+footer{margin-top:32px;color:var(--muted);font-size:13px;text-align:center;opacity:.9}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero card fade">
+      <div class="avatar">
+        <!-- Upload a file named `profile.jpg` in your repo OR replace this URL with your image link -->
+        <img src="https://raw.githubusercontent.com/Zabeerr/Zabeerr.github.io/main/profile.jpg" alt="Zabeerr Photo" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x300?text=Upload+profile.jpg'">
+      </div>
+      <div class="title">
+        <h1 class="name">Zabeerr</h1>
+        <p class="tag">Dark neon personal website • Student • Creator</p>
+        <div class="buttons">
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section><section id="about" class="card fade delay">
+  <h2 style="color:var(--accent);margin:0 0 8px">About Me</h2>
+  <p style="color:var(--muted);margin:0">Hi, I am Zabeerr. This is a lightweight dark themed site ready for GitHub Pages. Edit this text in index.html to add your bio, skills and links.</p>
+</section>
+
+<section id="contact" class="card fade delay" style="margin-top:18px">
+  <h2 style="color:var(--accent);margin:0 0 8px">Contact</h2>
+  <p style="color:var(--muted);margin:0">Email: <a href="mailto:your-email@gmail.com" style="color:var(--accent);text-decoration:none">your-email@gmail.com</a></p>
+</section>
+
+<footer>© 2025 Zabeerr — Made with GitHub Pages</footer>
+
+  </div>  <script>
+    // small script to reveal fade elements (ensures animation runs after DOM)
+    document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.fade').forEach((el,i)=>{el.style.animationDelay=(i*0.08)+'s'});});
+  </script></body>
+</html>
